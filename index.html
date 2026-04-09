@@ -83,7 +83,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>-–<br>title: Dijkstra算法（迪杰斯特拉）<br>date: 2026-04-09 23:30:00<br>permalink: dijkstra&#x2F;<br>tags:<br>  - 图论<br>  - 最短路<br>categories:<br>  - 算法竞赛<br>-–</p>
+        <hr>
+<p>title: Dijkstra算法（迪杰斯特拉）<br>date: 2026-04-09 23:30:00<br>permalink: dijkstra&#x2F;<br>tags:<br>  - 图论<br>  - 最短路<br>categories:<br>  - 算法竞赛<br>-–</p>
 <h1 id="Dijkstra算法"><a href="#Dijkstra算法" class="headerlink" title="Dijkstra算法"></a>Dijkstra算法</h1><p><strong>用处</strong>：用于求<strong>单源最短路</strong>，适用于<strong>边权非负</strong>的有向图或无向图。</p>
 <p><strong>实现过程概述</strong>：从起点 <code>s</code> 出发，维护数组 <code>dis[i]</code>，表示当前已知的从 <code>s</code> 到 <code>i</code> 的最短距离估计值。每次在所有尚未确定最短路的点中，选取 <code>dis</code> 最小的点，将其最短路确定下来，再用它去更新相邻点的距离。</p>
 <p><strong>实现原理</strong>：贪心。每次都优先确定当前距离源点最近的未确定点。</p>
