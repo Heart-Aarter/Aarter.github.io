@@ -6,12 +6,12 @@
   
   <title>线段树 | Aarter Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="线段树 1234567ll query1(ll s,ll l,ll r,ll p)&#123;&#x2F;&#x2F;单点按下标查询    if(l&#x3D;&#x3D;r)return t[s];    pushdown(l,r,s);    ll mid&#x3D;(l+r)&#x2F;2;    if(p&gt;mid)return query1(s*2+1,mid+1,r,p);    else return query1(s*2,l,mid,p">
+  <meta name="description" content="线段树 1234567ll query1(ll s,ll l,ll r,ll p)&#123;&#x2F;&#x2F;单点按下标查询    if(l&#x3D;&#x3D;r)return t[s];    pushdown(l,r,s);    ll mid&#x3D;(l+r)&#x2F;2;    if(p&gt;mid)return query1(s*2+1,mid+1,r,p);    else return query1(s*2,l,mid,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线段树">
 <meta property="og:url" content="http://example.com/%E7%BA%BF%E6%AE%B5%E6%A0%91/index.html">
 <meta property="og:site_name" content="Aarter Blog">
-<meta property="og:description" content="线段树 1234567ll query1(ll s,ll l,ll r,ll p)&#123;&#x2F;&#x2F;单点按下标查询    if(l&#x3D;&#x3D;r)return t[s];    pushdown(l,r,s);    ll mid&#x3D;(l+r)&#x2F;2;    if(p&gt;mid)return query1(s*2+1,mid+1,r,p);    else return query1(s*2,l,mid,p">
+<meta property="og:description" content="线段树 1234567ll query1(ll s,ll l,ll r,ll p)&#123;&#x2F;&#x2F;单点按下标查询    if(l&#x3D;&#x3D;r)return t[s];    pushdown(l,r,s);    ll mid&#x3D;(l+r)&#x2F;2;    if(p&gt;mid)return query1(s*2+1,mid+1,r,p);    else return query1(s*2,l,mid,">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-04-14T14:00:00.000Z">
 <meta property="article:modified_time" content="2026-04-16T10:55:00.461Z">
@@ -37,6 +37,18 @@
   
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
 
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 <meta name="generator" content="Hexo 8.1.1"></head>
 
 <body>
@@ -101,16 +113,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1>线段树</h1>
+        <h1 id="线段树">线段树</h1>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ll <span class="title">query1</span><span class="params">(ll s,ll l,ll r,ll p)</span></span>&#123;<span class="comment">//单点按下标查询</span></span><br><span class="line">    <span class="keyword">if</span>(l==r)<span class="keyword">return</span> t[s];</span><br><span class="line">    <span class="built_in">pushdown</span>(l,r,s);</span><br><span class="line">    ll mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(p&gt;mid)<span class="keyword">return</span> <span class="built_in">query1</span>(s*<span class="number">2</span><span class="number">+1</span>,mid<span class="number">+1</span>,r,p);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="built_in">query1</span>(s*<span class="number">2</span>,l,mid,p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="例题">例题</h2>
-<h3 id="P3372-【模板】-线段树1"><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3372">P3372 【模板】 线段树1</a></h3>
+<h3 id="p3372-模板-线段树1"><a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3372">P3372 【模板】
+线段树1</a></h3>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> endl <span class="string">&#x27;\n&#x27;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> ll N = <span class="number">100005</span>;</span><br><span class="line"></span><br><span class="line">ll n,m,opt,x,y,k;</span><br><span class="line"><span class="function">vector&lt;ll&gt; <span class="title">a</span><span class="params">(N)</span></span>;</span><br><span class="line"><span class="function">vector&lt;ll&gt; <span class="title">t</span><span class="params">(<span class="number">4</span>*N)</span></span>;</span><br><span class="line"><span class="function">vector&lt;ll&gt; <span class="title">lzy</span><span class="params">(<span class="number">4</span>*N)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">InRange</span><span class="params">(ll ql,ll qr,ll L,ll R)</span></span>&#123;<span class="comment">//判断要 查询/修改 的区间是否完全包含当前访问的区间</span></span><br><span class="line">    <span class="keyword">return</span> (ql&lt;=L) &amp;&amp; (qr&gt;=R);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">OutRange</span><span class="params">(ll ql,ll qr,ll L,ll R)</span></span>&#123;<span class="comment">//判断要 查询/修改 的区间是否与当前访问区间完全不重合</span></span><br><span class="line">    <span class="keyword">return</span> (ql&gt;R) || (qr&lt;L);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pushup</span><span class="params">(ll s)</span></span>&#123;<span class="comment">//向上更新树</span></span><br><span class="line">    t[s]=t[s*<span class="number">2</span>]+t[s*<span class="number">2</span><span class="number">+1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">makeTag</span><span class="params">(ll s,ll x,ll len)</span></span>&#123;<span class="comment">//标记</span></span><br><span class="line">    lzy[s]+=x;</span><br><span class="line">    t[s]+=len*x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pushdown</span><span class="params">(ll L,ll R,ll s)</span></span>&#123;<span class="comment">//向下传递标记</span></span><br><span class="line">    <span class="built_in">makeTag</span>(s*<span class="number">2</span>,lzy[s],(L+R)/<span class="number">2</span>-L<span class="number">+1</span>);</span><br><span class="line">    <span class="built_in">makeTag</span>(s*<span class="number">2</span><span class="number">+1</span>,lzy[s],R-(L+R)/<span class="number">2</span>);</span><br><span class="line">    lzy[s]=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(ll ql,ll qr,ll s)</span></span>&#123;<span class="comment">//建树</span></span><br><span class="line">    <span class="keyword">if</span>(ql==qr)&#123;</span><br><span class="line">        t[s]=a[ql];</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">build</span>(ql,(ql+qr)&gt;&gt;<span class="number">1</span>,s*<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">build</span>(((ql+qr)&gt;&gt;<span class="number">1</span>)<span class="number">+1</span>,qr,s*<span class="number">2</span><span class="number">+1</span>);</span><br><span class="line">    <span class="built_in">pushup</span>(s);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll ql,ll qr,ll L,ll R,ll s)</span></span>&#123;<span class="comment">//查询区间和</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">InRange</span>(ql,qr,L,R))&#123;</span><br><span class="line">        <span class="keyword">return</span> t[s];</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(!<span class="built_in">OutRange</span>(ql,qr,L,R))&#123;</span><br><span class="line">        <span class="built_in">pushdown</span>(L,R,s);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">query</span>(ql,qr,L,(L+R)/<span class="number">2</span>,s*<span class="number">2</span>)+<span class="built_in">query</span>(ql,qr,(L+R)/<span class="number">2</span><span class="number">+1</span>,R,s*<span class="number">2</span><span class="number">+1</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">(ll ql,ll qr,ll L,ll R,ll s,ll x)</span></span>&#123;<span class="comment">//对区间改值</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">InRange</span>(ql,qr,L,R))&#123;</span><br><span class="line">        <span class="built_in">makeTag</span>(s,x,R-L<span class="number">+1</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(!<span class="built_in">OutRange</span>(ql,qr,L,R))&#123;</span><br><span class="line">        <span class="built_in">pushdown</span>(L,R,s);</span><br><span class="line">        <span class="built_in">update</span>(ql,qr,L,(L+R)/<span class="number">2</span>,s*<span class="number">2</span>,x);</span><br><span class="line">        <span class="built_in">update</span>(ql,qr,(R+L)/<span class="number">2</span><span class="number">+1</span>,R,s*<span class="number">2</span><span class="number">+1</span>,x);</span><br><span class="line">        <span class="built_in">pushup</span>(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n;i++)cin&gt;&gt;a[i];</span><br><span class="line">    <span class="built_in">build</span>(<span class="number">1</span>,n,<span class="number">1</span>);<span class="comment">//建树</span></span><br><span class="line">    <span class="keyword">while</span>(m--)&#123;</span><br><span class="line">        cin&gt;&gt;opt;</span><br><span class="line">        <span class="keyword">if</span>(opt==<span class="number">1</span>)&#123;</span><br><span class="line">            cin&gt;&gt;x&gt;&gt;y&gt;&gt;k;</span><br><span class="line">            <span class="built_in">update</span>(x,y,<span class="number">1</span>,n,<span class="number">1</span>,k);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            cin&gt;&gt;x&gt;&gt;y;</span><br><span class="line">            ll ans=<span class="built_in">query</span>(x,y,<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">            cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/%E7%BA%BF%E6%AE%B5%E6%A0%91/" data-id="cuidN1pPQAU50NQ6tb0gSv_JL" data-title="线段树" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/%E7%BA%BF%E6%AE%B5%E6%A0%91/" data-id="cuidkfvPdbbcLG0rWFgFg19HM" data-title="线段树" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -122,11 +136,11 @@
     
 <nav id="article-nav">
   
-    <a href="/floyd/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/%E4%BA%8C%E5%8F%89%E6%A0%91/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          Floyd算法
+          二叉树
         
       </div>
     </a>
@@ -197,15 +211,15 @@
           </li>
         
           <li>
-            <a href="/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
-          </li>
-        
-          <li>
             <a href="/spfa/">SPFA算法</a>
           </li>
         
           <li>
             <a href="/floyd/">Floyd算法</a>
+          </li>
+        
+          <li>
+            <a href="/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
           </li>
         
           <li>
