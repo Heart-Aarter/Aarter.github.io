@@ -9,12 +9,12 @@
   <meta name="description" content="Dijkstra算法 用处：用于求单源最短路，适用于边权非负的有向图或无向图。 实现过程概述：从起点 s 出发，维护数组 dis[i]，表示当前已知的从 s 到 i 的最短距离估计值。每次在所有尚未确定最短路的点中，选取 dis 最小的点，将其最短路确定下来，再用它去更新相邻点的距离。 实现原理：贪心。每次都优先确定当前距离源点最近的未确定点。 实现原理证明过程 前提条件：图中所有">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dijkstra算法">
-<meta property="og:url" content="http://example.com/dijkstra/index.html">
+<meta property="og:url" content="http://example.com/%E5%9B%BE%E8%AE%BA/%E6%9C%80%E7%9F%AD%E8%B7%AF">
 <meta property="og:site_name" content="Aarter Blog">
 <meta property="og:description" content="Dijkstra算法 用处：用于求单源最短路，适用于边权非负的有向图或无向图。 实现过程概述：从起点 s 出发，维护数组 dis[i]，表示当前已知的从 s 到 i 的最短距离估计值。每次在所有尚未确定最短路的点中，选取 dis 最小的点，将其最短路确定下来，再用它去更新相邻点的距离。 实现原理：贪心。每次都优先确定当前距离源点最近的未确定点。 实现原理证明过程 前提条件：图中所有">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-04-09T15:30:00.000Z">
-<meta property="article:modified_time" content="2026-04-14T14:07:07.778Z">
+<meta property="article:modified_time" content="2026-04-17T12:47:11.220Z">
 <meta property="article:author" content="Aarter">
 <meta property="article:tag" content="图论">
 <meta property="article:tag" content="最短路">
@@ -89,7 +89,7 @@
       <div class="outer">
         <section id="main"><article id="post-Dijkstra算法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/dijkstra/" class="article-date">
+    <a href="/%E5%9B%BE%E8%AE%BA/%E6%9C%80%E7%9F%AD%E8%B7%AF" class="article-date">
   <time class="dt-published" datetime="2026-04-09T15:30:00.000Z" itemprop="datePublished">2026-04-09</time>
 </a>
     
@@ -204,7 +204,7 @@ Pumping G</a></h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/dijkstra/" data-id="cuidzNxiN8mNykM5dBHRHJp5S" data-title="Dijkstra算法" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/%E5%9B%BE%E8%AE%BA/%E6%9C%80%E7%9F%AD%E8%B7%AF" data-id="cuidEdj4gsJvNRn91dirj1eSl" data-title="Dijkstra算法" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -216,11 +216,11 @@ Pumping G</a></h3>
     
 <nav id="article-nav">
   
-    <a href="/%E7%BA%BF%E6%AE%B5%E6%A0%91/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          线段树
+          二叉树
         
       </div>
     </a>
@@ -250,7 +250,7 @@ Pumping G</a></h3>
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag">图论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" rel="tag">最短路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%84%E9%80%A0/" rel="tag">构造</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91/" rel="tag">树</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCA/" rel="tag">LCA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag">图论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" rel="tag">最短路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%84%E9%80%A0/" rel="tag">构造</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91/" rel="tag">树</a></li></ul>
     </div>
   </div>
 
@@ -260,7 +260,7 @@ Pumping G</a></h3>
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 20px;">图论</a> <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" style="font-size: 16.67px;">最短路</a> <a href="/tags/%E6%9E%84%E9%80%A0/" style="font-size: 10px;">构造</a> <a href="/tags/%E6%A0%91/" style="font-size: 13.33px;">树</a>
+      <a href="/tags/LCA/" style="font-size: 10px;">LCA</a> <a href="/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 20px;">图论</a> <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" style="font-size: 15px;">最短路</a> <a href="/tags/%E6%9E%84%E9%80%A0/" style="font-size: 10px;">构造</a> <a href="/tags/%E6%A0%91/" style="font-size: 15px;">树</a>
     </div>
   </div>
 
@@ -282,23 +282,23 @@ Pumping G</a></h3>
       <ul>
         
           <li>
+            <a href="/%E5%9B%BE%E8%AE%BA/%E6%A0%91/LCA">最近公共祖先LCA</a>
+          </li>
+        
+          <li>
             <a href="/%E6%9E%84%E9%80%A0/">构造</a>
           </li>
         
           <li>
-            <a href="/spfa/">SPFA算法</a>
+            <a href="/%E5%9B%BE%E8%AE%BA/%E6%9C%80%E7%9F%AD%E8%B7%AF">SPFA算法</a>
           </li>
         
           <li>
-            <a href="/floyd/">Floyd算法</a>
+            <a href="/%E5%9B%BE%E8%AE%BA/%E6%9C%80%E7%9F%AD%E8%B7%AF">Floyd算法</a>
           </li>
         
           <li>
-            <a href="/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
-          </li>
-        
-          <li>
-            <a href="/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>
+            <a href="/%E5%9B%BE%E8%AE%BA/%E6%A0%91/%E7%BA%BF%E6%AE%B5%E6%A0%91">线段树</a>
           </li>
         
       </ul>
